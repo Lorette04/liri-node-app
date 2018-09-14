@@ -69,9 +69,9 @@ function concert(inputUser) {
             console.log("Name of the venue: " + jsonData[0].venue.name);
             console.log("Venue location: " + jsonData[0].venue.city);
             console.log("Venue location: " + jsonData[0].venue.country);
-            console.log("Date of the Event: " + jsonData[0].datetime);
+            console.log("Date of the Event: " + moment(jsonData[0].datetime).format('L'));
 
-            // moment().format('L');
+            // moment(jsonData[0].datetime).format('L');
 
         }
     });
@@ -135,14 +135,14 @@ function movie(inputUser) {
 };
 
 // // 4 - `node liri.js do-what-it-says`
-var fs = require("fs");
+// var fs = require("fs");
 
-fs.readFile("random.txt", "utf8", function (error) {
-    if (error) {
-        return console.log(error);
-    }
-    console.log(data);
-    var dataArr = data.split(",");
-    console.log(dataArr);
+// fs.readFile("random.txt", "utf8", function (error) {
+//     if (error) {
+//         return console.log(error);
+//     }
+//     console.log(data);
+//     var dataArr = data.split(",");
+//     console.log(dataArr);
 
-})
+// })
